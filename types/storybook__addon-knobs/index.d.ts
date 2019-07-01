@@ -59,6 +59,9 @@ export function select<
         undefined
     >
 >(name: string, options: ReadonlyArray<T>, value: T, groupId?: string): T;
+export function select<
+  T extends React.OptionHTMLAttributes<HTMLOptionElement>['value']
+>(name: string, options: ReadonlyArray<T>, value?: T, groupId?: string): T;
 
 export function date(name: string, value?: Date, groupId?: string): Date;
 
